@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: hospital-management-api
+    runtime: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRE
+        value: 24h
+      - key: CLIENT_URL
+        sync: false
