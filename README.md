@@ -151,7 +151,7 @@ Open `http://localhost:5173` in your browser and sign in using the demo buttons!
 The repository includes deployment configuration for a split deployment:
 
 - **Render** runs the Express API from `server/` using `render.yaml`.
-- **Vercel** builds the React client from `client/` using `vercel.json`.
+- **Vercel** builds the React client from `client/`.
 
 ### Render API
 
@@ -165,7 +165,7 @@ The repository includes deployment configuration for a split deployment:
 ### Vercel frontend
 
 1. In Vercel, import this GitHub repository.
-2. Keep the repository root as the project root; `vercel.json` supplies the client build settings.
+2. Set the Vercel **Root Directory** to `client`.
 3. Add `VITE_API_URL` with the Render API URL followed by `/api`, for example:
 
 ```env
